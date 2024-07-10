@@ -1,0 +1,54 @@
+// // import dbConnect from '../../lib/dbConnect';
+// import clientPromise from '../../lib/mongodb.js';
+// import { Categories } from '../../models/Category.js';
+
+// export default async function handler(req, res) {
+// //   await dbConnect();
+// // await clientPromise();
+
+//   const { category } = req.query;
+//   console.log(category);
+//   console.log("API request received for category:", category);
+
+//   try {
+//     console.log("heloooooooooooooo");
+//     const categories = await Categories.find({ name });
+//     console.log("categories found:", categories);
+
+//     res.status(200).json(categories);
+//   } catch (error) {
+//     console.error("Error fetching categories:", error);
+
+//     res.status(500).json({ error: 'Failed to fetch categories' });
+//   }
+// }
+
+
+// api/category.js
+// import dbConnect from '../../lib/dbConnect';
+// import clientPromise from '../../lib/mongodb.js';
+import { Categories } from '../../models/Category.js';
+
+export default async function handler(req, res) {
+  // await dbConnect();
+  // await clientPromise();
+
+  const { category } = req.query;
+  console.log("API request received for category:", category);
+
+  try {
+    console.log("hellooooooo");
+
+    // Fetch categories based on category name
+    const categories = await Categories.find({ name: category }); // Adjusted here
+    console.log("categories found:", categories);
+
+    res.status(200).json(categories);
+  } catch (error) {
+    console.error("Error fetching categories:", error);
+
+    res.status(500).json({ error: 'Failed to fetch categories' });
+  }
+}
+
+

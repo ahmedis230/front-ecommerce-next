@@ -1,0 +1,31 @@
+
+    { 
+      "home": "Hem",
+      "my_shop":"Min Butik",
+      "all_products": "Alla Produkter",
+      "categories": "Kategorier",
+      "account": "Konto",
+      "logout": "Logga ut",
+      "cart": "Kundvagn",
+      "language": "Språk",
+      "massage_beds": "Massagebäddar",
+      "spa_beds": "Spabäddar",
+      "rehabilitation_tables": "Rehabiliteringsbord",
+      "medical_chairs": "Medicinska stolar",
+      "hairdressing_furniture": "Frisörmöbler",
+      "manicure_tables": "Manikyrbord",
+      "lamps": "Lampor",
+      "beauty_equipments": "Skönhetsutrustning",
+      "sterilizers": "Sterilisatorer",
+      "stools": "Pallar",
+      "physiotherapy_tables": "Fysioterapibord",
+      "waiting_room_chairs": "Väntrumstolar",
+      "dressing_tables": "Sminkbord",
+      "backwashes": "Hårtvättar",
+      "beauty_chairs": "Skönhetsstolar",
+      "salon_chairs": "Salongstolar",
+      "accessories": "Tillbehör",
+      "reception_desks": "Receptioner"
+    }
+  
+  
