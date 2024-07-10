@@ -12,6 +12,7 @@ import { CartContext } from "../../lib/CartContext.js";
 import { useContext, useState } from "react";
 import { translate } from '../../pages/LanguageUtils.js';
 import { LanguageContext } from "./LanguageContext.js";
+import Image from 'next/image';
 
 
 
@@ -153,7 +154,13 @@ const Header = ({locale}) => {
                                 {session ? (
                                     <div className="sm:flex sm:gap-2 border-r border-primary pr-4">
                                         <div className="h-9 w-9">
-                                            <img className="h-full w-full rounded-full object-cover object-center" src={session.user.image} alt={session.user.email} />
+                                            <Image className="h-full w-full rounded-full object-cover object-center"
+                                             src={session.user.image}
+                                              alt={session.user.email}
+                                              width={800} // specify the width
+                                              height={600} // specify the height
+                                              
+                                              />
                                         </div>
                                     </div>
                                 ) : (

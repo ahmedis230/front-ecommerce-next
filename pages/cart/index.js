@@ -12,6 +12,7 @@ import toast from "react-hot-toast";
 import { translate } from '../../pages/LanguageUtils.js';
 import { LanguageContext } from "../components/LanguageContext.js";
 import { useRouter } from "next/router.js";
+import Image from 'next/image';
 
 export default function Cart() {
   const { language } = useContext(LanguageContext)
@@ -29,6 +30,9 @@ export default function Cart() {
   const { data: session } = useSession();
   const [isSuccess, setIsSuccess] = useState(false);
 
+
+
+  
   useEffect(() => {
     setLoading(true);
     if (cartProducts.length > 0) {
@@ -52,6 +56,8 @@ export default function Cart() {
       clearCart();
     }
   }, []);
+
+
 
   let total = 0;
   for (const productId of cartProducts) {
@@ -126,10 +132,12 @@ export default function Cart() {
                   <div key={product._id} className="mt-8">
                     <ul className="space-y-4">
                       <li className="flex items-center gap-4 justify-between">
-                        <img
+                        <Image
                           src={product.images[0]}
                           alt=""
                           className="h-16 w-16 rounded object-cover"
+                          width={800} // specify the width
+                          height={600} // specify the height
                         />
 
                         <div>

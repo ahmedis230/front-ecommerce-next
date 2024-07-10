@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { translate } from '../../pages/LanguageUtils.js';
 import { LanguageContext } from "../components/LanguageContext.js";
 import { useRouter } from "next/router.js";
+import Image from 'next/image';
 
 const formatPrice = (price) => {
   return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -23,22 +24,26 @@ export default function ProductPage({ product }) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Image section */}
           <div className="lg:aspect-h-2 lg:aspect-w-2 lg:rounded-lg overflow-hidden px-4 md:px-2">
-            <img
+            <Image
               src={product.images[0]}
               alt={product.images[0]}
               className="w-full h-full md:h-[90vh]  object-center border border-primary rounded-lg"
+              width={800} 
+              height={600}
             />
           </div>
           <div className="grid grid-cols-2 lg:grid lg:grid-cols-1 lg:gap-y-4 px-2 gap-2 md:gap-0 md:px-2">
             {product.images.slice(1, 3).map((image, index) => (
               <div
-                key={index}
+              key={`${product._id}-${index}`}
                 className="lg:aspect-h-2 lg:aspect-w-3 lg:overflow-hidden lg:rounded-lg "
               >
-                <img
+                <Image
                   src={image}
                   alt={image}
                   className="w-full h-full md:h-[44vh]  object-center border rounded-lg border-secondary p-4"
+                  width={800} 
+                  height={600}
                 />
               </div>
             ))}

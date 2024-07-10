@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { translate } from '../../pages/LanguageUtils.js';
 import { LanguageContext } from "./LanguageContext.js";
 import { useRouter } from "next/router.js";
+import Image from 'next/image';
 
 // Utility function to format price with a comma for thousands
 const formatPrice = (price) => {
@@ -17,8 +18,8 @@ export default function Collection({ product }) {
   if(product) {
     return <>
     <section>
-      <div class="max-w-screen-2xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
-        <header class="text-center">
+      <div className="max-w-screen-2xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+        <header className="text-center">
           <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
           {translate('New_Collection', language)}
           </h2>
@@ -58,20 +59,24 @@ export default function Collection({ product }) {
                 <ul className="grid grid-cols-2 gap-4">
                   <li>
                     <div className="block group">
-                      <img
+                      <Image
                         src={product.images[0]}
                         alt=""
                         className="object-cover w-full rounded aspect-square"
+                        width={800} // specify the width
+                        height={600} // specify the height
                       />
                     </div>
                   </li>
 
                   <li>
                     <div  className="block group">
-                      <img
+                      <Image
                         src={product.images[1]}
                         alt=""
                         className="object-cover w-full rounded aspect-square"
+                        width={800} // specify the width
+                        height={600} // specify the height
                       />
                     </div>
                   </li>

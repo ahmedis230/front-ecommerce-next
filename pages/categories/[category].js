@@ -2,21 +2,32 @@
 
 
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import Link from "next/link";
+import Image from 'next/image';
+import { CartContext } from '../../lib/CartContext.js';
+import toast from "react-hot-toast";
+import { translate } from '../../pages/LanguageUtils.js';
+import { LanguageContext } from '../components/LanguageContext.js';
 
-export default function CategoryPage() {
+export default function CategoryPage({product}) {
   const router = useRouter();
   const { category } = router.query;
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [ayhaga, setAyhaga] = useState([]);
+  const { addProduct } = useContext(CartContext);
+  const { language } = useContext(LanguageContext)
 
 
   const formatPrice = (price) => {
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
+
+  // function addItemToCart() {
+  //   addProduct(product[0]._id);
+  // }
 
   useEffect(() => {
     if (category) {
@@ -65,15 +76,19 @@ export default function CategoryPage() {
             <div className="group block overflow-hidden border border-accent rounded-xl border-opacity-10">
               <div className="">
                 <div className="relative md:h-[300px] h-[200px]">
-                  <img
+                  <Image
                     src={product.images[0]}
                     alt=""
                     className="absolute inset-0 opacity-100 group-hover:opacity-0"
+                    width={800} // specify the width
+                    height={600} // specify the height
                   />
-                  <img
+                  <Image
                     src={product.images[1]}
                     alt=""
                     className="absolute inset-0 opacity-0 group-hover:opacity-100"
+                    width={800} // specify the width
+                    height={600} // specify the height
                   />
                 </div>
 
@@ -97,7 +112,7 @@ export default function CategoryPage() {
                         }}
                         className="disabled block rounded bg-secondary px-5 py-3 text-md text-text w-full transition hover:bg-purple-300"
                       >
-                        Add to cart
+                        {translate('Add_tocart', language)}
                       </button>
                     </div>
                   </div>

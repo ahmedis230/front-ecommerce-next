@@ -1,5 +1,5 @@
 // pages/LanguageUtils.js
-export const translations = {
+ const translations = {
     en: {
    
         "home": "Home",
@@ -38,6 +38,9 @@ export const translations = {
         "Your_Cart":"Your Cart",
         "cart_empty":"Your cart is empty",
         "Quantity":"Quantity",
+        "Clear_Cart":" clear cart",
+        "Subtotal":" Sub Total",
+
         "Shipping_Tax":"Shipping Tax",
         "Total":"Total ",
         "Continue_shopping":"Continue shopping ",
@@ -94,18 +97,6 @@ export const translations = {
         "account_details":"نحن نستخدم تفاصيل حسابك للشحن.",
         "Checkout":"الدفع",
         "should_signup":"يجب عليك التسجيل لعرض عناصر سلة التسوق"
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -172,6 +163,8 @@ export const translations = {
   
   };
   
+  export default translations;
+
   export const translate = (key, lang) => {
     return translations[lang][key];
   };

@@ -50,6 +50,9 @@
 // };
 
 module.exports = {
+  images: {
+    domains: ['res.cloudinary.com', 'lh3.googleusercontent.com'],
+  },
   i18n: {
     locales: ["en", "ar","sv"],
     defaultLocale: "en",

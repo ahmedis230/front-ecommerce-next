@@ -9,6 +9,7 @@ import { translate } from '../../pages/LanguageUtils.js';
 import { LanguageContext } from "../components/LanguageContext.js";
 import { useRouter } from "next/router.js";
 
+import Image from 'next/image';
 
 // Utility function to format price with a comma for thousands
 const formatPrice = (price) => {
@@ -74,15 +75,19 @@ export default function Products({ allProducts }) {
                   <div className="group block overflow-hidden border border-accent rounded-xl border-opacity-10">
                     <div className="">
                       <div className="relative md:h-[300px] h-[200px]">
-                        <img
+                        <Image
                           src={product.images[0]}
                           alt=""
                           className="absolute inset-0 h-full w-full object-contain opacity-100 group-hover:opacity-0"
+                          width={800} 
+                          height={600}
                         />
-                        <img
+                        <Image
                           src={product.images[1]}
                           alt=""
                           className="absolute inset-0 h-full w-full object-contain opacity-0 group-hover:opacity-100"
+                          width={800} 
+                          height={600}
                         />
                       </div>
 
