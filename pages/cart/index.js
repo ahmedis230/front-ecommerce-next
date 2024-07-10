@@ -9,10 +9,10 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import Success from "../components/Success";
 import toast from "react-hot-toast";
 
-import { translate } from '../../pages/LanguageUtils.js';
-import { LanguageContext } from "../components/LanguageContext.js";
 import { useRouter } from "next/router.js";
 import Image from 'next/image';
+import LanguageContext from "../components/LanguageContext.js";
+import { translate }from "../../Utils/_LanguageUtils.js";
 
 export default function Cart() {
   const { language } = useContext(LanguageContext)

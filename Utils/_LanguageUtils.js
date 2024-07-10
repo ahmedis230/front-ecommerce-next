@@ -1,5 +1,5 @@
 // pages/LanguageUtils.js
- const translations = {
+ export const translations = {
     en: {
    
         "home": "Home",
@@ -163,8 +163,8 @@
   
   };
   
-  export default translations;
 
   export const translate = (key, lang) => {
     return translations[lang][key];
   };
+  
