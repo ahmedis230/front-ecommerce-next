@@ -10,9 +10,9 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { CartContext } from "../../lib/CartContext.js";
 
 import { useContext, useState } from "react";
-import { translate }from '../../Utils/_LanguageUtils.js';
+import { translate }from '../../Utils/LanguageUtils.js';
 import Image from 'next/image';
-import LanguageContext from "./LanguageContext.js";
+import LanguageContext from "../../context/_LanguageContext.js";
 
 
 

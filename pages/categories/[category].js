@@ -8,8 +8,8 @@ import Link from "next/link";
 import Image from 'next/image';
 import { CartContext } from '../../lib/CartContext.js';
 import toast from "react-hot-toast";
-import { translate }from '../../Utils/_LanguageUtils.js';
-import LanguageContext from '../components/LanguageContext.js';
+import { translate }from '../../Utils/LanguageUtils.js';
+import LanguageContext from '../../context/_LanguageContext.js';
 
 export default function CategoryPage({product}) {
   const router = useRouter();
