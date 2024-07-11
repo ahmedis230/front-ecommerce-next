@@ -4,7 +4,7 @@ import { Product } from '../../models/Product.js';
 
 export default async function handler(req, res) {
 //   await dbConnect();
-// await clientPromise();
+await clientPromise;
 
   const { category } = req.query;
   // console.log(category);
