@@ -8,7 +8,7 @@ await clientPromise;
 
   const { category } = req.query;
   // console.log(category);
-  // console.log("API request received for category:", category);
+  console.log("API request received for category:", category);
 
   try {
     // console.log("heloooooooooooooo");

@@ -11,7 +11,7 @@ import toast from "react-hot-toast";
 import { translate }from '../../Utils/LanguageUtils.js';
 import LanguageContext from '../../context/_LanguageContext.js';
 
-export default function CategoryPage({product}) {
+export default function CategoryPage() {
   const router = useRouter();
   const { category } = router.query;
   const [products, setProducts] = useState([]);

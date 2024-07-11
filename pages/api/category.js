@@ -52,9 +52,10 @@ export default async function handler(req, res) {
 
 
   try {
-    await clientPromise;
+    // await clientPromise;
 
     const { category } = req.query;
+    console.log(` my category ${category}`);
     console.log("API request received for category:", category);
 
     const categories = await Categories.find({ name: category });
