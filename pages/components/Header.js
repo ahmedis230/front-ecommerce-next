@@ -149,7 +149,7 @@ const Header = ({locale}) => {
                             </ul>
                         </nav>
 
-                        {/* <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-4">
                             <div className="sm:flex sm:gap-4">
                                 {session ? (
                                     <div className="sm:flex sm:gap-2 border-r border-primary pr-4">
@@ -215,9 +215,9 @@ const Header = ({locale}) => {
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                                 </svg>
                             </button>
-                        </div> */}
+                        </div>
 
- <div className="container mx-5 px-4 flex-end">
+ {/* <div className="container mx-5 px-4 flex-end">
                 <div className="flex justify-between items-center py-4">
                     <div className="flex items-center gap-4">
                         {session ? (
@@ -280,7 +280,7 @@ const Header = ({locale}) => {
                     </div>
                     
                 </div>
-            </div>
+            </div> */}
 
 
 
