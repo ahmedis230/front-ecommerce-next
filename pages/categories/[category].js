@@ -128,7 +128,7 @@ export default function CategoryPage() {
 
                   <div className="mt-1.5 flex flex-col items-center justify-between text-text">
                     <p className="tracking-wide text-primary text-sm md:text-md">
-                      ksh. {formatPrice(product.price)}
+                      Euro. {formatPrice(product.price)}
                     </p>
 
                     <div className="col-span-12 text-center w-full mt-3">
