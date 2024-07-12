@@ -52,6 +52,8 @@ const Header = ({locale}) => {
     };
     const closeMobileDropdown = () => {
         setIsMobileDropdownOpen(false); // Function to close mobile dropdown
+        setIsMobileNavOpen(false); // Close mobile nav menu
+
     };
 
     return (
