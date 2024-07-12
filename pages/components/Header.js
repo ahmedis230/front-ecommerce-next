@@ -50,6 +50,9 @@ const Header = ({locale}) => {
         setIsMobileDropdownOpen(!isMobileDropdownOpen);
         setActiveLink('/categories');
     };
+    const closeMobileDropdown = () => {
+        setIsMobileDropdownOpen(false); // Function to close mobile dropdown
+    };
 
     return (
         <>
@@ -306,59 +309,59 @@ const Header = ({locale}) => {
                                     </button>
                                     {isMobileDropdownOpen && (
                                         <div className="absolute mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 max-h-64 overflow-y-auto">
-                                        <Link href="/categories/Massage Beds" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/Massage Beds'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/Massage Beds" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => {closeMobileDropdown(); setActiveLink('/categories/Massage Beds'); setIsDropdownOpen(false); }}>
                                         {translate('massage_beds', language)}
                                         </Link>
-                                        <Link href="/categories/spa beds" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/spa beds'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/spa beds" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { closeMobileDropdown(); setActiveLink('/categories/spa beds'); setIsDropdownOpen(false); }}>
                                         {translate('spa_beds', language)}
                                         </Link>
-                                        <Link href="/categories/Rehabilitation Tables" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/Rehabilitation Tables'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/Rehabilitation Tables" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { closeMobileDropdown(); setActiveLink('/categories/Rehabilitation Tables'); setIsDropdownOpen(false); }}>
                                         {translate('rehabilitation_tables', language)}
                                         </Link>
-                                        <Link href="/categories/Medical Chairs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/Medical Chairs'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/Medical Chairs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { closeMobileDropdown(); setActiveLink('/categories/Medical Chairs'); setIsDropdownOpen(false); }}>
                                         {translate('medical_chairs', language)}
                                         </Link>
-                                        <Link href="/categories/Hairdressing Furniture" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/Hairdressing Furniture'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/Hairdressing Furniture" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { closeMobileDropdown(); setActiveLink('/categories/Hairdressing Furniture'); setIsDropdownOpen(false); }}>
                                         {translate('hairdressing_furniture', language)}
                                         </Link>
-                                        <Link href="/categories/Manicure Tables" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/Manicure Tables'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/Manicure Tables" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { closeMobileDropdown(); setActiveLink('/categories/Manicure Tables'); setIsDropdownOpen(false); }}>
                                         {translate('manicure_tables', language)}
                                         </Link>
-                                        <Link href="/categories/Lamps" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/Lamps'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/Lamps" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { closeMobileDropdown(); setActiveLink('/categories/Lamps'); setIsDropdownOpen(false); }}>
                                         {translate('lamps', language)}
                                         </Link>
-                                        <Link href="/categories/Beauty Equipments" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/Beauty Equipments'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/Beauty Equipments" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { closeMobileDropdown(); setActiveLink('/categories/Beauty Equipments'); setIsDropdownOpen(false); }}>
                                         {translate('beauty_equipments', language)}
                                         </Link>
-                                        <Link href="/categories/Sterilizers" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/Sterilizers'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/Sterilizers" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { closeMobileDropdown(); setActiveLink('/categories/Sterilizers'); setIsDropdownOpen(false); }}>
                                         {translate('sterilizers', language)}
                                         </Link>
-                                        <Link href="/categories/Stools" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/Stools'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/Stools" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { closeMobileDropdown(); setActiveLink('/categories/Stools'); setIsDropdownOpen(false); }}>
                                         {translate('stools', language)}
                                         </Link>
-                                        <Link href="/categories/Physiotherapy Tables" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/Physiotherapy Tables'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/Physiotherapy Tables" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { closeMobileDropdown(); setActiveLink('/categories/Physiotherapy Tables'); setIsDropdownOpen(false); }}>
                                         {translate('physiotherapy_tables', language)}
                                         </Link>
-                                        <Link href="/categories/WAITING ROOM CHAIRS" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/WAITING ROOM CHAIRS'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/WAITING ROOM CHAIRS" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { closeMobileDropdown(); setActiveLink('/categories/WAITING ROOM CHAIRS'); setIsDropdownOpen(false); }}>
                                         {translate('waiting_room_chairs', language)}
                                         </Link>
-                                        <Link href="/categories/DRESSING TABLES" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/DRESSING TABLES'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/DRESSING TABLES" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { closeMobileDropdown(); setActiveLink('/categories/DRESSING TABLES'); setIsDropdownOpen(false); }}>
                                         {translate('dressing_tables', language)}
                                         </Link>
-                                        <Link href="/categories/BACKWASHES" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/BACKWASHES'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/BACKWASHES" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { closeMobileDropdown(); setActiveLink('/categories/BACKWASHES'); setIsDropdownOpen(false); }}>
                                         {translate('backwashes', language)}
                                         </Link>
-                                        <Link href="/categories/Beauty Chairs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/Beauty Chairs'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/Beauty Chairs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { closeMobileDropdown(); setActiveLink('/categories/Beauty Chairs'); setIsDropdownOpen(false); }}>
                                         {translate('beauty_chairs', language)}
                                         </Link>
-                                        <Link href="/categories/SALON CHAIRS" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/SALON CHAIRS'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/SALON CHAIRS" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { closeMobileDropdown(); setActiveLink('/categories/SALON CHAIRS'); setIsDropdownOpen(false); }}>
                                         {translate('salon_chairs', language)}
                                         </Link>
-                                        <Link href="/categories/ACCESSORIES" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/ACCESSORIES'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/ACCESSORIES" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { closeMobileDropdown(); setActiveLink('/categories/ACCESSORIES'); setIsDropdownOpen(false); }}>
                                         {translate('accessories', language)}
                                         </Link>
                                         
-                                        <Link href="/categories/RECEPTION DESKS" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setActiveLink('/categories/RECEPTION DESKS'); setIsDropdownOpen(false); }}>
+                                        <Link href="/categories/RECEPTION DESKS" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { closeMobileDropdown(); setActiveLink('/categories/RECEPTION DESKS'); setIsDropdownOpen(false); }}>
                                         {translate('reception_desks', language)}
                                         </Link>
                                       </div>

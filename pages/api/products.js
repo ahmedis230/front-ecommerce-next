@@ -68,7 +68,7 @@ export default async function handler(req, res) {
     const categoryId = new mongoose.Types.ObjectId(category);
 
     // Fetch products based on category
-    const products = await Product.find({ category: categoryId }).limit(2).exec();
+    const products = await Product.find({ category: categoryId }).exec();
     console.log("Products found:", products);
 
     res.status(200).json(products);
