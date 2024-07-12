@@ -150,7 +150,8 @@ const Header = ({locale}) => {
                         </nav>
 
                         <div className="flex items-center gap-4">
-                            <div className="sm:flex sm:gap-4">
+
+                            <div className="flex lg-block sm:gap-4">
                                 {session ? (
                                     <div className="sm:flex sm:gap-2 border-r border-primary pr-4">
                                         <div className="h-9 w-9">
