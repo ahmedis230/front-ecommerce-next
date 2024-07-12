@@ -5,7 +5,7 @@ import { useRouter } from "next/router.js";
 import { useContext, useState } from "react";
 import { translate }from '../../Utils/LanguageUtils.js';
 import Image from 'next/image';
-import LanguageContext from "../../context/_LanguageContext.js";
+import LanguageContext from "./_LanguageContext.js";
 
 // Utility function to format price with a comma for thousands
 const formatPrice = (price) => {

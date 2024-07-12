@@ -5,7 +5,7 @@ import { useContext } from "react";
 import toast from "react-hot-toast";
 
 import { translate }from '../../Utils/LanguageUtils.js';
-import  LanguageContext  from "../../context/_LanguageContext.js";
+import  LanguageContext  from "../components/_LanguageContext.js";
 import { useRouter } from "next/router.js";
 import Image from 'next/image';
 

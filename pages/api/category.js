@@ -77,7 +77,6 @@ export default async function handler(req, res) {
   console.log("API request received for category:", category);
 
   try {
-    // Ensure the database connection is established
     const client = await clientPromise;
     const db = client.db();
     
