@@ -9,7 +9,7 @@ import Image from 'next/image';
 import { CartContext } from '../../lib/CartContext.js';
 import toast from "react-hot-toast";
 import { translate }from '../../Utils/LanguageUtils.js';
-import LanguageContext from '../components/_LanguageContext.js';
+import LanguageContext from '../../context/_LanguageContext.js';
 // import { Categories } from "@/models/Product";
 
 export default function CategoryPage() {

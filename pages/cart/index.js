@@ -11,7 +11,7 @@ import toast from "react-hot-toast";
 
 import { useRouter } from "next/router.js";
 import Image from 'next/image';
-import LanguageContext from "../components/_LanguageContext.js";
+import LanguageContext from "../../context/_LanguageContext.js";
 import { translate } from "../../Utils/LanguageUtils.js";
 
 export default function Cart() {

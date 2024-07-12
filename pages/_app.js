@@ -42,7 +42,7 @@ import { SessionProvider } from 'next-auth/react';
 import { Toaster } from 'react-hot-toast';
 import { appWithTranslation } from 'next-i18next';
 import {useRouter} from 'next/router'
-import { LanguageProvider  } from './components/_LanguageContext.js';
+import { LanguageProvider  } from '../context/_LanguageContext.js';
 
 // import { serverSideTranslations } from 'next-i18next/serverSideTranslations'; // Import serverSideTranslations
 

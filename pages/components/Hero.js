@@ -9,7 +9,7 @@ import { useContext, useState } from "react";
 import { translate }from '../../Utils/LanguageUtils.js';
 import { useRouter } from "next/router.js";
 import Image from 'next/image';
-import LanguageContext from "./_LanguageContext.js";
+import LanguageContext from "../../context/_LanguageContext.js";
 
 
 
