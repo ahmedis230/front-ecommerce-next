@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@auth/mongodb-adapter": "^3.4.1",
+    "@auth0/nextjs-auth0": "^3.5.0",
     "autoprefixer": "^10.4.19",
     "axios": "^1.7.2",
     "i18next": "^23.11.5",
