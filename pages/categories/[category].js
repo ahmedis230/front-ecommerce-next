@@ -30,32 +30,58 @@ export default function CategoryPage() {
   //   addProduct(product[0]._id);
   // }
 
+  // useEffect(() => {
+  //   if (category) {
+  //     // Fetch products based on the category
+  //       axios.get(`/api/category?category=${category}`)
+  //       .then(response => {
+  //         setProducts(response.data);
+  //         setLoading(false);
+
+  //         // Check if products array has items before accessing _id
+  //         if (response.data.length > 0) {
+  //           axios.get(`/api/products?category=${response.data[0]._id}`)
+  //             .then(response => {
+  //               setAyhaga(response.data);
+  //             })
+  //             .catch(error => {
+  //               console.error("Error fetching products:", error);
+  //               setLoading(false);
+  //             });
+  //         }
+  //       })
+  //       .catch(error => {
+  //         console.error("Error fetching products:", error);
+  //         setLoading(false);
+  //       });
+  //   }
+  // }, [category]);
+
+
   useEffect(() => {
-    if (category) {
-      // Fetch products based on the category
-      axios.get(`/api/category?category=${category}`)
-        .then(response => {
-          setProducts(response.data);
+    const fetchProducts = async () => {
+      if (category) {
+        try {
+          // Fetch categories based on the category
+          const categoryResponse = await axios.get(`/api/category?category=${category}`);
+          setProducts(categoryResponse.data);
           setLoading(false);
 
           // Check if products array has items before accessing _id
-          if (response.data.length > 0) {
-            axios.get(`/api/products?category=${response.data[0]._id}`)
-              .then(response => {
-                setAyhaga(response.data);
-              })
-              .catch(error => {
-                console.error("Error fetching products:", error);
-                setLoading(false);
-              });
+          if (categoryResponse.data.length > 0) {
+            const productResponse = await axios.get(`/api/products?category=${categoryResponse.data[0]._id}`);
+            setAyhaga(productResponse.data);
           }
-        })
-        .catch(error => {
+        } catch (error) {
           console.error("Error fetching products:", error);
           setLoading(false);
-        });
-    }
-  }, [category]);
+        }
+      }
+    };
+
+    fetchProducts();
+  }, [category]);
+
 
   // Move console.log(products[0]._id) inside useEffect to avoid accessing undefined
   useEffect(() => {
