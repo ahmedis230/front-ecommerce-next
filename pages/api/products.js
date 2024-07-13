@@ -51,7 +51,7 @@
 
 import mongoose from 'mongoose';
 import { Product } from '../../models/Product.js';
-import clientPromise from '../../lib/mongodb.js';
+// import clientPromise from '../../lib/mongodb.js';
 
 export default async function handler(req, res) {
   const { category } = req.query;
@@ -59,16 +59,16 @@ export default async function handler(req, res) {
 
   try {
     // Ensure that the database connection is ready
-    const client = await clientPromise;
-    if (!client) {
-      throw new Error('Failed to connect to database');
-    }
+    // const client = await clientPromise;
+    // if (!client) {
+    //   throw new Error('Failed to connect to database');
+    // }
 
     // Convert category to ObjectId if it's not already
     const categoryId = new mongoose.Types.ObjectId(category);
 
     // Fetch products based on category
-    const products = await Product.find({ category: categoryId }).limit(1).exec();
+    const products = await Product.find({ category: categoryId }).limit(2).exec();
     console.log("Products found:", products);
 
     res.status(200).json(products);
